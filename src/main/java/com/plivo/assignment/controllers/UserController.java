@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
 
 @RestController
 @RequestMapping(value = "plivo/v1")
@@ -50,7 +49,6 @@ public class UserController {
             return UserEntityResponse.buildErrorResponse(ErrorCode.INTERNAL_SERVER_ERROR,e.getMessage());
         }
     }
-
 
     @RequestMapping(value="/searchByName",method = RequestMethod.GET)
     public UserEntityResponse searchContact(String name,Integer page){
